@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'jsoneditor',
+    'rest_framework',
 
     'app',
 ]
@@ -148,3 +149,15 @@ REQUEST_TIMEOUT = int(os.getenv('REQUEST_TIMEOUT', '90'))
 
 # Info URLs.
 BEDS_INFO_URL = os.getenv('BEDS_INFO_URL', 'https://stopcorona.tn.gov.in/beds.php')
+
+
+# Public API.
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20
+}
+if DEBUG:
+    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] += ('rest_framework.renderers.BrowsableAPIRenderer',)

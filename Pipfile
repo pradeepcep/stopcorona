@@ -11,6 +11,8 @@ python-dateutil = "*"
 psycopg2-binary = "*"
 python-dotenv = "*"
 django-jsoneditor-widget = "*"
+djangorestframework = "*"
+markdown = "*"
 
 [dev-packages]
 

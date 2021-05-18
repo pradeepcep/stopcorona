@@ -15,6 +15,7 @@ djangorestframework = "*"
 markdown = "*"
 
 [dev-packages]
+ipdb = "*"
 
 [requires]
 python_version = "3.9"

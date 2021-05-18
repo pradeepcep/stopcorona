@@ -13,6 +13,7 @@ python-dotenv = "*"
 django-jsoneditor-widget = "*"
 djangorestframework = "*"
 markdown = "*"
+sentry-sdk = "*"
 
 [dev-packages]
 ipdb = "*"
